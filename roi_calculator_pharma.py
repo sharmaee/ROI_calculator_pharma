@@ -3,9 +3,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import random
 
-import streamlit as st
-import matplotlib.pyplot as plt
-import random
 
 # Function to generate sample data
 def generate_sample_data(quarters=5):
@@ -60,6 +57,15 @@ if st.button('Generate Sample Data'):
     st.pyplot(fig)
 
 
+# Hardcoded data for the Provider Analytics table
+provider_analytics_data = {
+    "Top Submitters": ["Provider A", "Provider B", "Provider C"],
+    "Top Denials": ["Provider X", "Provider Y", "Provider Z"],
+    "Top Competing Submitters": ["Competitor 1", "Competitor 2", "Competitor 3"]
 
+# Creating a DataFrame from the hardcoded data
+df_provider_analytics = pd.DataFrame(provider_analytics_data)
 
-
+# Streamlit interface for displaying the table
+st.title('Provider Analytics')
+st.table(df_provider_analytics)
