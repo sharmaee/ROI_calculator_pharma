@@ -14,7 +14,7 @@ with slider_col:
     drug_cost = st.slider ('Rx List Price ($USD)', min_value=0, max_value=2000, value=575)
     avg_rebate = st.slider ('Average Negotiated Rebate (%)', min_value=0, max_value=100, value=75)
     submissions = st.slider('Total PA Submissions per Year', min_value=0, max_value=1000000, value=70000)
-    denials = st.slider('Number of Denials or Incomplete Submissions per Year', min_value=10000, max_value=1000000, value=35000)
+    denials = st.slider('Number of Incomplete Submissions per Year', min_value=10000, max_value=1000000, value=35000)
     platform_fee = st.slider('Lamar Platform Fee (one time)', min_value=0, max_value=200000, value=100000)
     price_per_auth = st.slider('Cost Per Authorization', min_value=0.0, max_value=40.0, value=35.0)
     number_of_years = st.slider('Years', min_value=0, max_value=10, value=5)
